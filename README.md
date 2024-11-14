@@ -50,23 +50,25 @@ data.isnull().sum()
 ```
 x_test.shape
 ```
+### X,Y DATA VALUES
 
 ```
 x=data["v1"].values
 y=data["v2"].values
 ```
+### SKLEARN
 ```
 from sklearn.model_selection import train_test_split
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=0)
-```
-```
 from sklearn.feature_extraction.text import CountVectorizer
 cv=CountVectorizer()
 ```
+### TRANSFORM 
 ```
 x_train=cv.fit_transform(x_train)
 x_test=cv.transform(x_test)
 ```
+### IMPORT 
 ```
 from sklearn.svm import SVC
 svc=SVC()
@@ -74,6 +76,7 @@ svc.fit(x_train,y_train)
 y_pred=svc.predict(x_test)
 y_pred
 ```
+### ACCURACY 
 ```
 from sklearn import metrics
 accuracy=metrics.accuracy_score(y_test,y_pred)
@@ -101,7 +104,7 @@ accuracy
 ### X_TEST.SHAPE:
 ![image](https://github.com/user-attachments/assets/6f0518f6-170b-4d85-8b0a-96603de797fa)
 
-### Y_PREDICTION VALU:
+### Y_PREDICTION VALUE:
 ![image](https://github.com/user-attachments/assets/0eb284b3-06a6-4db3-b2f2-36d4b327955d)
 
 ### ACCURACY: 
