@@ -56,8 +56,8 @@ x_test.shape
 ### X,Y DATA VALUES
 
 ```
-x=data["v1"].values
-y=data["v2"].values
+x=data["v2"].values
+y=data["v1"].values
 ```
 ### SKLEARN
 ```
